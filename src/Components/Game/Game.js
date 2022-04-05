@@ -10,10 +10,13 @@ function Game() {
   return (
     <div id="game-container">
       <p>How many coins?</p>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      {coins}
+      <div id="choice-buttons">
+        <button className="choice">1</button>
+        <button className="choice">2</button>
+        <button className="choice">3</button>
+      </div>
+      <div id="coins-container">{coins}</div>
+      <div id="game-messages"></div>
     </div>
   )
 }

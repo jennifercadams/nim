@@ -1,0 +1,12 @@
+#difficulty {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#start-button {
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  margin: 20px auto;
+  padding: 5px 15px;
+}

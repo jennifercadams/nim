@@ -1,0 +1,20 @@
+main {
+  display: grid;
+  grid-template-areas: "header" "game";
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+h1 {
+  grid-area: header;
+}
+
+p {
+  margin: 10px 0;
+}
+
+#start-container, #game-container {
+  grid-area: game;
+}

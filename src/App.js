@@ -15,11 +15,11 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <main>
       <h1>Let's Play Nim!</h1>
       {start && <Start startGame={startGame} setDifficulty={setDifficulty} />}
       {game && <Game />}
-    </div>
+    </main>
   );
 }
 

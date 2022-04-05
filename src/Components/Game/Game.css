@@ -1,0 +1,26 @@
+#game-container {
+  font-size: 26px;
+}
+
+#coins-container {
+  margin: 20px 0;
+}
+
+.coin {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice {
+  font-family: inherit;
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px 15px;
+}

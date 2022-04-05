@@ -36,6 +36,7 @@ function Game({ difficulty, backToStart }) {
     setLastPlayerMove(choice);
     if (coinsLeft - choice === 0) {
       setWinner('player');
+      setLastNimMove(null);
       setCoinsLeft(0);
       return;
     }

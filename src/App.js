@@ -25,7 +25,7 @@ function App() {
         <h1>Nim Game</h1>
       </header>
       <main>
-        {start && <Start startGame={startGame} setDifficulty={setDifficulty} />}
+        {start && <Start startGame={startGame} difficulty={difficulty} setDifficulty={setDifficulty} />}
         {game && <Game difficulty={difficulty} backToStart={backToStart} />}
       </main>
     </div>

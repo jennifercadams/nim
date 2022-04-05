@@ -1,6 +1,6 @@
 import './Start.css';
 
-function Start({ startGame, setDifficulty }) {
+function Start({ startGame, difficulty, setDifficulty }) {
   return (
     <div id="start-container">
       <h2>How To Play</h2>
@@ -10,7 +10,7 @@ function Start({ startGame, setDifficulty }) {
       <select 
         id="difficulty" 
         name="difficulty" 
-        defaultValue="normal"
+        defaultValue={difficulty}
         onChange={(e) => setDifficulty(e.target.value)}
       >
         <option value="easy">Easy</option>

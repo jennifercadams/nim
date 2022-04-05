@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nim/static/css/main.afb1ab44.css",
+    "main.js": "/nim/static/js/main.122eae3a.js",
+    "index.html": "/nim/index.html",
+    "main.afb1ab44.css.map": "/nim/static/css/main.afb1ab44.css.map",
+    "main.122eae3a.js.map": "/nim/static/js/main.122eae3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afb1ab44.css",
+    "static/js/main.122eae3a.js"
+  ]
+}

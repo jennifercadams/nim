@@ -13,8 +13,20 @@ function Game({ difficulty }) {
     coins.push(<div className="coin" key={i}>$</div>)
   }
 
-  const impossibleNim = (choice) => {
-    return (coinsLeft - choice) % 4;
+  const nimTurn = (choice) => {
+    if (difficulty === 'easy') {
+      return Math.ceil(Math.random() * 3);
+    }
+    if (difficulty === 'normal') {
+      if (coinsLeft >= 9 || (coinsLeft - choice) % 4 === 0) {
+        return Math.ceil(Math.random() * 3);
+      } else {
+        return (coinsLeft - choice) % 4;
+      }
+    }
+    if (difficulty === 'impossible') {
+      return (coinsLeft - choice) % 4;
+    }
   }
 
   const handleTurn = e => {
@@ -27,7 +39,7 @@ function Game({ difficulty }) {
       return;
     }
 
-    const nimChoice = impossibleNim(choice);
+    const nimChoice = nimTurn(choice);
     const coinsRemoved = choice + nimChoice;
     setLastNimMove(nimChoice);
 

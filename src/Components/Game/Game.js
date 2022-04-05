@@ -52,7 +52,7 @@ function Game({ difficulty, backToStart }) {
     <div id="game-container">
       <div id="coins-container">{coins}</div>
       {!winner && <div id="choice-buttons">
-        <p>How many coins?</p>
+        <p id="choice-label">How many coins?</p>
         <button className="choice" value={1} onClick={handleTurn} disabled={coinsLeft < 1}>1</button>
         <button className="choice" value={2} onClick={handleTurn} disabled={coinsLeft < 2}>2</button>
         <button className="choice" value={3} onClick={handleTurn} disabled={coinsLeft < 3}>3</button>

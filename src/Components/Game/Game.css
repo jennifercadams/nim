@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+#choice-label {
+  margin-bottom: 10px;
+}
+
 .choice {
   font-family: inherit;
   font-size: 20px;

@@ -14,11 +14,16 @@ function App() {
     setGame(true);
   }
 
+  const backToStart = () => {
+    setStart(true);
+    setGame(false);
+  }
+
   return (
     <main>
       <h1>Let's Play Nim!</h1>
       {start && <Start startGame={startGame} setDifficulty={setDifficulty} />}
-      {game && <Game difficulty={difficulty} />}
+      {game && <Game difficulty={difficulty} backToStart={backToStart} />}
     </main>
   );
 }

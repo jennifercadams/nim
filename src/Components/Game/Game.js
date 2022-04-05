@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import './Game.css';
 
-function Game({ difficulty }) {
+function Game({ difficulty, backToStart }) {
   const [ coinsLeft, setCoinsLeft ] = useState(12);
   const [ winner, setWinner ] = useState(null);
   const [ lastPlayerMove, setLastPlayerMove ] = useState(null);
@@ -62,7 +62,7 @@ function Game({ difficulty }) {
         {lastNimMove && <p>Nim removed {lastNimMove} coins.</p>}
         {winner && <div id="game-over-msg">
           <p>{winner === 'player' ? 'You win! Play again?' : 'Nim wins! Better luck next time.'}</p>
-          <button id="replay-button">Play Again</button>
+          <button id="replay-button" onClick={backToStart}>Play Again</button>
         </div>}
       </div>
     </div>

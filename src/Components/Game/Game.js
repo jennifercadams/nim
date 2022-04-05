@@ -14,39 +14,37 @@ function Game({ difficulty }) {
   }
 
   const nimTurn = (choice) => {
+    const newCoinsLeft = coinsLeft - choice;
+    const max = newCoinsLeft >= 3 ? 3 : newCoinsLeft;
     if (difficulty === 'easy') {
-      return Math.ceil(Math.random() * 3);
+      return Math.ceil(Math.random() * max);
     }
     if (difficulty === 'normal') {
-      if (coinsLeft >= 9 || (coinsLeft - choice) % 4 === 0) {
-        return Math.ceil(Math.random() * 3);
+      if (coinsLeft >= 9 || (newCoinsLeft) % 4 === 0) {
+        return Math.ceil(Math.random() * max);
       } else {
-        return (coinsLeft - choice) % 4;
+        return (newCoinsLeft) % 4;
       }
     }
     if (difficulty === 'impossible') {
-      return (coinsLeft - choice) % 4;
+      return (newCoinsLeft) % 4;
     }
   }
 
   const handleTurn = e => {
     const choice = Number(e.target.value);
     setLastPlayerMove(choice);
-
     if (coinsLeft - choice === 0) {
       setWinner('player');
       setCoinsLeft(0);
       return;
     }
-
     const nimChoice = nimTurn(choice);
     const coinsRemoved = choice + nimChoice;
     setLastNimMove(nimChoice);
-
     if (coinsLeft - coinsRemoved === 0) {
       setWinner('nim');
     }
-
     setCoinsLeft(coinsLeft - coinsRemoved);
   }
 

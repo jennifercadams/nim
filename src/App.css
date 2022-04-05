@@ -21,6 +21,7 @@ h2 {
 }
 
 main {
+  padding: 20px;
   text-align: center;
   grid-area: game;
 }

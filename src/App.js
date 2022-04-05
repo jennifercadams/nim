@@ -1,9 +1,11 @@
 import './App.css';
+import Start from './Components/Start/Start';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, World</h1>
+      <h1>Let's Play Nim!</h1>
+      <Start />
     </div>
   );
 }

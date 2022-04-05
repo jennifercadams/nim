@@ -22,7 +22,7 @@ function App() {
   return (
     <div id="App">
       <header>
-        <h1>Let's Play Nim!</h1>
+        <h1>Nim Game</h1>
       </header>
       <main>
         {start && <Start startGame={startGame} setDifficulty={setDifficulty} />}

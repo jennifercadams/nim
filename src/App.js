@@ -18,7 +18,7 @@ function App() {
     <main>
       <h1>Let's Play Nim!</h1>
       {start && <Start startGame={startGame} setDifficulty={setDifficulty} />}
-      {game && <Game />}
+      {game && <Game difficulty={difficulty} />}
     </main>
   );
 }

@@ -1,4 +1,4 @@
-main {
+#App {
   display: grid;
   grid-template-areas: "header" "game";
   justify-items: center;
@@ -8,10 +8,10 @@ main {
   font-family: "Roboto";
 }
 
-h1 {
+header {
   grid-area: header;
 }
 
-#start-container, #game-container {
+main {
   grid-area: game;
 }

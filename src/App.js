@@ -20,11 +20,15 @@ function App() {
   }
 
   return (
-    <main>
-      <h1>Let's Play Nim!</h1>
-      {start && <Start startGame={startGame} setDifficulty={setDifficulty} />}
-      {game && <Game difficulty={difficulty} backToStart={backToStart} />}
-    </main>
+    <div id="App">
+      <header>
+        <h1>Let's Play Nim!</h1>
+      </header>
+      <main>
+        {start && <Start startGame={startGame} setDifficulty={setDifficulty} />}
+        {game && <Game difficulty={difficulty} backToStart={backToStart} />}
+      </main>
+    </div>
   );
 }
 
